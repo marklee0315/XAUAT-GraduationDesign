@@ -2,7 +2,6 @@ import tkinter.messagebox
 from tkinter import *
 from tkinter import filedialog
 
-from cnn import predictionModule
 from dataProcessing import openpose, openpose2dataset
 
 root = Tk()
@@ -27,9 +26,9 @@ def predict():
     tkinter.messagebox.showinfo(title='predict', message='预测开始！！')  # 提示信息对话窗
     # videoDisplay.executeFrom()
 
-    model = predictionModule.load_model('H:\Code\PyCharm\GraduationDesign\cnn\models\cnn_model_label.h5')
-    prediction = model.predict_classes(predictionModule.test_x)
-    print(prediction[1])
+    # model = predictionModule.load_model('H:\Code\PyCharm\GraduationDesign\cnn\models\cnn_model_label.h5')
+    # prediction = model.predict_classes(predictionModule.test_x)
+    # print(prediction[1])
 
 
 btn1 = Button(root, text='打开视频', command=processing_video)
